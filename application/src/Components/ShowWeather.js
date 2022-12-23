@@ -1,6 +1,5 @@
 import React from "react";
 export default function ShowWeather({weatherData, country, errorMessage}) {
-    console.log(weatherData)
     if (errorMessage) {
         return (
             <div className="error showWeather">
@@ -19,7 +18,6 @@ export default function ShowWeather({weatherData, country, errorMessage}) {
     const cloudCoverage = weatherData.clouds.all;
     const {visibility} = weatherData;
 
-    //const convertedPressure = pressure/1000)
     return (
         <section className="showWeather weather_main">
             <h2 className="weather_heading">Weather Data for {city}, {country}</h2>
